@@ -1,0 +1,5 @@
+title: backend::lang.reorder.default_title
+modelClass: Fes\Slider\Models\Lists
+nameFrom: title
+toolbar:
+    buttons: reorder_toolbar

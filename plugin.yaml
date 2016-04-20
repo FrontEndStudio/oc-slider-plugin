@@ -1,0 +1,15 @@
+plugin:
+    name: 'fes.slider::lang.plugin.name'
+    description: 'fes.slider::lang.plugin.description'
+    author: Front End Studio
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    Slider:
+        label: 'fes.slider::lang.plugin.name'
+        url: /fes/slider/list
+        icon: icon-life-ring
+permissions:
+    slider:
+        tab: 'fes.slider::lang.plugin.name'
+        label: 'fes.slider::lang.plugin.name'

@@ -1,0 +1,23 @@
+fields:
+    title:
+        label: fes.slider::lang.sliderdata.title
+        span: full
+        type: text
+
+    show_title:
+        label: fes.slider::lang.sliderdata.show_title
+        span: auto
+        type: switch
+        default: false
+
+    status:
+        label: fes.slider::lang.sliderdata.status
+        span: auto
+        type: switch
+        default: true
+
+    image:
+        label: fes.slider::lang.sliderdata.image
+        span: full
+        type: fileupload
+        mode: image

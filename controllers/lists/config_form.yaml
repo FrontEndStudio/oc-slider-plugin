@@ -1,0 +1,10 @@
+name: fes.slider::lang.plugin.name
+modelClass: Fes\Slider\Models\Lists
+form: $/fes/slider/models/lists/fields.yaml
+defaultRedirect: fes/slider/lists
+create:
+    redirect: 'fes/slider/lists/update/:id'
+    redirectClose: fes/slider/lists
+update:
+    redirect: fes/slider/lists
+    redirectClose: fes/slider/lists

@@ -1,0 +1,51 @@
+{% set records = __SELF__.records %}
+{% set noRecordsMessage = __SELF__.noRecordsMessage %}
+{% set extraData = __SELF__.extraData %}
+
+<div class="slideshow">
+    <div class="slider-container">
+        <div id="slider-image_01" class="slider-image"
+            data-cycle-log="false"
+            data-cycle-fx="scrollHorz"
+            data-cycle-timeout="4000"
+            data-cycle-slides="> div"
+            data-cycle-prev="#js-slider-prev"
+            data-cycle-next="#js-slider-next"
+            data-cycle-pager="#js-slider-pager"
+            data-cycle-pager-template="<li class='num'><a href=#>{% raw %}{{slideNum}}{% endraw %}</a></li>"
+            data-cycle-pager-active-class="active"
+            data-cycle-swipe="true"
+            data-cycle-caption-plugin="caption2"
+            data-cycle-overlay-fx-out="slideUp"
+            data-cycle-overlay-fx-in="slideDown"
+        >
+
+{% for record in records %}
+
+    <span class="cycle-overlay"></span>
+    <div class="slider-image--item" data-cycle-title="{{ record.image.title | raw }}" data-cycle-desc="{{ record.image.description | raw }}">
+        <img src="{{ record.image.getThumb(640, 480, 'auto') }}" alt="{{ record.image.title | raw }}">
+    </div>
+
+    {% if loop.last %}
+        {% if records|length > 1 %}
+        <nav class="tab-pager">
+            <ul>
+                <li class="tab-pager--left" id="js-slider-prev"><a href="#"><span>Vorige</span></a></li>
+                <a href="#" id="js-slider-pager"></a>
+                <li class="tab-pager--right" id="js-slider-next"><a href="#"><span>Volgende</span></a></li>
+            </ul>
+        </nav>
+        {% endif %}
+    {% endif %}
+
+{% else %}
+    <span class="cycle-overlay"></span>
+        <div class="slider-image--item" data-cycle-title="{{ noRecordsMessage }}" data-cycle-desc="">
+            <img src="http://placehold.it/640x480">
+        </div>
+{% endfor %}
+
+        </div>
+    </div>
+</div>

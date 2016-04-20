@@ -1,0 +1,12 @@
+title: fes.slider::lang.plugin.name
+modelClass: Fes\Slider\Models\Lists
+list: $/fes/slider/models/lists/columns.yaml
+recordUrl: 'fes/slider/lists/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+showSorting: 1
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
